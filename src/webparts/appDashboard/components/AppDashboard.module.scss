@@ -3,32 +3,76 @@
 .appDashboard {
   overflow: hidden;
   padding: 1em;
-  color: "[theme:bodyText, default: #323130]";
-  color: var(--bodyText);
-  &.teams {
-    font-family: $ms-font-family-fallbacks;
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 25px;
+  column-gap: 25px;
+
+  // background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(242,242,242,1) 100%);
+  border-radius: 5px;
+  // box-shadow: 0 2.5px 5px rgba(0,0,0,0.25);
+  backdrop-filter: blur(5px);
+
+  p {
+    font-weight: bold;
+    transition: all 0.25s ease-in-out;
   }
 }
 
-.welcome {
-  text-align: center;
-}
+.appDashboardItem {
+  height: 125px;
+  width: 125px;
+  border-radius: 10px;
+  box-shadow: 0 2.5px 5px rgba(0,0,0,0.25);
+  padding: 1em;
 
-.welcomeImage {
-  width: 100%;
-  max-width: 420px;
-}
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 10px;
 
-.links {
-  a {
-    text-decoration: none;
-    color: "[theme:link, default:#03787c]";
-    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+  box-sizing: border-box;
 
-    &:hover {
-      text-decoration: underline;
-      color: "[theme:linkHovered, default: #014446]";
-      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+  transition: all 0.25s ease-in-out;
+  background: #fff;
+
+  border: 5px solid transparent;
+
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+
+  img {
+    max-height: 50px;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  p {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &:hover {
+    transition: all 0.5s ease-in-out;
+    border: 5px solid #0078D4;
+
+    p {
+      transition: all 0.1s ease-in-out;
     }
   }
+}
+
+.appDashboardImage {
+  height: 50px;
+  width: 100px;
 }
