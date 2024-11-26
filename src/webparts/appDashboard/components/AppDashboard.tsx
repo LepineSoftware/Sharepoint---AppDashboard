@@ -13,7 +13,10 @@ export default class AppDashboard extends React.Component<IAppDashboardProps, {}
           {items.length > 0 ? (items.map((item, i) => {
             return (
               <a href={item.URL ? item.URL : ''} target="_blank" rel="noreferrer" key={i} className={styles.appDashboardItem}>
-                  {item.Icon && <img src={item.Icon} alt={item.Title} />}
+                  <div className={styles.appDashboardIcon}>
+                    {item.Icon && <img src={item.Icon} alt={item.Title} />}
+                  </div>
+
                   <p>{item.Title}</p>
               </a>
             )

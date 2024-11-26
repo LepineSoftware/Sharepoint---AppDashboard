@@ -47,14 +47,6 @@
   text-decoration: none;
   color: inherit;
 
-  img {
-    max-height: 50px;
-    max-width: 100%;
-    width: auto;
-    object-fit: contain;
-    object-position: center;
-  }
-
   p {
     text-align: center;
     font-weight: bold;
@@ -72,7 +64,18 @@
   }
 }
 
-.appDashboardImage {
+.appDashboardIcon {
   height: 50px;
   width: 100px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
 }
